@@ -1,0 +1,14 @@
+theme = "catppuccin-mocha"
+font-family = "JetBrains Mono"
+font-size = 14
+window-padding-x = 10
+window-padding-y = 10
+background-blur-radius = 20
+mouse-hide-while-typing = true
+window-decoration = true
+keybind = global:cmd+d=toggle_quick_terminal
+background-opacity = 0.7
+background-blur-radius = 20
+
+
+
