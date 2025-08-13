@@ -6,16 +6,24 @@ Personal dotfiles for macOS development environment, managed with [GNU Stow](htt
 
 This repository contains configuration files for various development tools and applications:
 
+- **Brewfile** - Homebrew package management with all essential development tools
 - **btop** - System monitor configuration
-- **configstore** - Firebase tools configuration storage  
+- **configstore** - Firebase tools configuration storage
+- **firebase** - Firebase CLI configuration
+- **ghostty** - Terminal emulator configuration
+- **git** - Git version control settings
 - **github-copilot** - GitHub Copilot extension settings
 - **neofetch** - System info display configuration
-- **nvim** - Neovim editor configuration (NvChad-based)
+- **nvim** - Neovim editor configuration
 - **raycast** - Raycast launcher with extensions
+- **shell** - Shell configuration and utilities
+- **simplebar** - macOS status bar customization
 - **skhd** - Simple hotkey daemon for window management
 - **spicetify** - Spotify customization with marketplace
 - **starship** - Cross-shell prompt configuration
+- **tmux** - Terminal multiplexer configuration
 - **yabai** - Tiling window manager for macOS
+- **zsh** - Zsh shell configuration
 
 ## Installation
 
@@ -23,8 +31,15 @@ This repository uses GNU Stow to create symlinks from the repository to your hom
 
 ### Prerequisites
 
-Install GNU Stow:
+Install Homebrew and essential tools:
 ```bash
+# Install Homebrew (if not already installed)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install all packages from Brewfile
+brew bundle install
+
+# GNU Stow is included in the Brewfile, but you can install it separately:
 brew install stow
 ```
 
