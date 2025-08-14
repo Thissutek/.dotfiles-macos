@@ -6,6 +6,36 @@ tap "supabase/tap"
 brew "btop"
 # Statistics utility to count lines of code
 brew "cloc"
+# Enhanced CLI Tools for Productivity
+# Modern ls replacement with Git integration
+brew "eza"
+# Syntax-highlighted cat
+brew "bat"
+# Fast find alternative
+brew "fd"
+# Beautiful Git diffs
+brew "delta"
+# Modern du
+brew "dust"
+# Command benchmarking
+brew "hyperfine"
+# Simplified man pages
+brew "tldr"
+# Modern ps
+brew "procs"
+# Network bandwidth monitor
+brew "bandwhich"
+# Interactive tree view
+brew "broot"
+# Terminal dashboard
+brew "wtfutil"
+# Database tools
+# Better PostgreSQL CLI
+brew "pgcli"
+# Better MySQL CLI
+brew "mycli"
+# Redis CLI
+brew "redis"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
 # Command-line fuzzy finder written in Go

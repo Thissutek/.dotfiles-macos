@@ -42,8 +42,18 @@ ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
 
+# Auto-balance windows when one is destroyed
+yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+
+# Enhanced app space assignment rules
+yabai -m rule --add app="^(Code|IntelliJ IDEA|Xcode)$" space=2
+yabai -m rule --add app="^(Chrome|Firefox|Safari)$" space=3
+yabai -m rule --add app="^(Slack|Discord|Messages)$" space=4
+yabai -m rule --add app="^(Spotify|Music)$" space=5
+
+# Existing rules
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="^(Spotify|Music)$" manage=off
-yabai -m rule --add app="Notes" manage-off
+yabai -m rule --add app="Notes" manage=off
 

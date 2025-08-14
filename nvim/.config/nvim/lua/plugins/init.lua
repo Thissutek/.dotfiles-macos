@@ -47,4 +47,72 @@ return {
       },
     },
   },
+  
+  -- AI-Powered Development Enhancement
+  {
+    "Exafunction/codeium.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp" },
+    config = true,
+    event = "BufEnter",
+  },
+  
+  -- Beautiful diagnostics and trouble shooting
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
+    cmd = "Trouble",
+    keys = {
+      {
+        "<leader>xx",
+        "<cmd>Trouble diagnostics toggle<cr>",
+        desc = "Diagnostics (Trouble)",
+      },
+      {
+        "<leader>xX",
+        "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+        desc = "Buffer Diagnostics (Trouble)",
+      },
+    },
+  },
+  
+  -- Show keybindings
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {},
+    keys = {
+      {
+        "<leader>?",
+        function()
+          require("which-key").show({ global = false })
+        end,
+        desc = "Buffer Local Keymaps (which-key)",
+      },
+    },
+  },
+  
+  -- Advanced Git Integration
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    cmd = "LazyGit",
+    keys = {
+      { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
+  },
+  
+  {
+    "lewis6991/gitsigns.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {
+      signs = {
+        add = { text = "+" },
+        change = { text = "~" },
+        delete = { text = "_" },
+        topdelete = { text = "‾" },
+        changedelete = { text = "~" },
+      },
+    },
+  },
 }
