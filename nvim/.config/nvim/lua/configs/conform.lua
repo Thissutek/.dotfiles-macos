@@ -5,7 +5,7 @@ local options = {
     html = { "prettier" },
     javascript = { "prettier" },
     typescript = { "prettier" },
-    go = {"golangci-lint"},
+    go = { "gofumpt" },
   },
 
   format_on_save = {

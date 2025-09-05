@@ -47,7 +47,7 @@ return {
       },
     },
   },
-  
+
   -- AI-Powered Development Enhancement
   {
     "Exafunction/codeium.nvim",
@@ -55,7 +55,7 @@ return {
     config = true,
     event = "BufEnter",
   },
-  
+
   -- Beautiful diagnostics and trouble shooting
   {
     "folke/trouble.nvim",
@@ -75,7 +75,7 @@ return {
       },
     },
   },
-  
+
   -- Show keybindings
   {
     "folke/which-key.nvim",
@@ -85,13 +85,13 @@ return {
       {
         "<leader>?",
         function()
-          require("which-key").show({ global = false })
+          require("which-key").show { global = false }
         end,
         desc = "Buffer Local Keymaps (which-key)",
       },
     },
   },
-  
+
   -- Advanced Git Integration
   {
     "kdheepak/lazygit.nvim",
@@ -101,7 +101,18 @@ return {
       { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
   },
-  
+  -- colorbuddy
+  {
+    "tjdevries/colorbuddy.nvim",
+    config = function()
+      -- Delay to ensure theme loads first
+      vim.defer_fn(function()
+        require "configs.colorbuddy"
+      end, 100)
+    end,
+    event = "VeryLazy",
+  },
+  -- Lua
   {
     "lewis6991/gitsigns.nvim",
     event = { "BufReadPre", "BufNewFile" },

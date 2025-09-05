@@ -38,3 +38,5 @@ extract() {
 alias sendtowin="scp -r ~/ToWindows/* jonathan@192.168.2.81:~/Desktop/macOS/"
 alias getfromwin="scp \"jonathan@192.168.2.81:~/Desktop/macOS/*\" ~/FromWindows/"
 alias winbox="ssh jonathan@192.168.2.81"
+eval $(thefuck --alias)
+. "$HOME/.local/bin/env"
